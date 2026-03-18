@@ -933,7 +933,8 @@ p {
   }
 
   .hero-stats {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
   }
 
   .material-card {
@@ -954,5 +955,68 @@ p {
 @media (min-width: 900px) {
   .materials-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Final mobile overrides to prevent breakpoint conflicts */
+@media (max-width: 560px) {
+  .hero-content {
+    max-width: 100%;
+    padding: 2.4rem 0 2rem;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 0.6rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-top: 1.4rem;
+  }
+
+  .stat-item {
+    padding: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.9rem;
+  }
+
+  .hero-orb-main {
+    width: 150px;
+    height: 150px;
+    right: -60px;
+    bottom: -38px;
+    opacity: 0.35;
+  }
+
+  .hero-orb-small,
+  .hero-orb-mid {
+    display: none;
+  }
+
+  .mascot-wrapper {
+    width: 72px;
+    max-width: 72px;
+    bottom: 12px;
+    right: 8px;
+  }
+
+  .mascot {
+    width: 72px;
+    height: 92px;
+  }
+
+  .mascot-tooltip {
+    max-width: 110px;
+    font-size: 0.72rem;
+    padding: 0.5rem 0.65rem;
   }
 }
